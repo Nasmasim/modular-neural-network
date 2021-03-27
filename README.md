@@ -10,7 +10,7 @@ The mini-library implements:
   * a ReLu Layer
     * applies ReLU elementwise
   * a Linear Layer
-    * performs affine transformation $`XW + B`$ on a batch on inputs $`X`$, 
+    * performs affine transformation **XW + B** on a batch on inputs **X**, 
     * Xavier Glorot weight initialization
 * [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py): 
   * an MSE Loss Layer
