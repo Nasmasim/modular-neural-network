@@ -1,7 +1,6 @@
 import numpy as np
-from activations.linear import LinearLayer
-from activations.sigmoid import SigmoidLayer
-from activations.ReLu import ReluLayer
+from layers.activations import LinearLayer, SigmoidLayer, ReluLayer
+
 
 class MultiLayerNetwork(object):
     """
@@ -26,7 +25,6 @@ class MultiLayerNetwork(object):
         self.neurons = neurons
         self.activations = activations
 
-
         #stack all layers in one ndarray 
         layers = np.ndarray((len(self.neurons)*2),dtype=np.object)
         n_in = self.input_dim
@@ -42,8 +40,6 @@ class MultiLayerNetwork(object):
             
         self._layers = layers
                 
-            
-
 
     def forward(self, x):
         """
@@ -64,7 +60,6 @@ class MultiLayerNetwork(object):
             if not self._layers[i] == 'identity':
                 z_temp = self._layers[i].forward(z_temp)
         return z_temp 
-
 
 
     def __call__(self, x):

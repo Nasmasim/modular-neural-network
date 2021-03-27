@@ -1,4 +1,4 @@
-import numpy as np 
+import numpy as np
 
 class Preprocessor(object):
     """
@@ -15,7 +15,7 @@ class Preprocessor(object):
             data {np.ndarray} dataset used to determine the parameters for
             the normalization.
         """
-
+ 
         #find maximum and minimum in data and set a and b according to range [0,1]
         self.maximum = np.amax(data, axis = 0)
         self.minimum = np.amin(data, axis = 0)
@@ -54,3 +54,5 @@ class Preprocessor(object):
         #revert min max normalization : Scaling a to smallest value and b to largest value
         reverted_data = (data - self.a) * (self.maximum - self.minimum) / (self.b-self.a) + self.minimum 
         return reverted_data
+
+

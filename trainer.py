@@ -1,8 +1,5 @@
-from losses.mse_loss import MSELossLayer
-from losses.cross_entropy import CrossEntropyLossLayer
+from layers.losses import CrossEntropyLossLayer, MSELossLayer
 import numpy as np
-
-
 
 class Trainer(object):
     """
@@ -37,6 +34,7 @@ class Trainer(object):
         self.learning_rate = learning_rate
         self.loss_fun = loss_fun
         self.shuffle_flag = shuffle_flag
+
 
         if loss_fun == 'cross_entropy':
             self._loss_layer = CrossEntropyLossLayer()
@@ -123,3 +121,5 @@ class Trainer(object):
         #get current target prediction and return calculated loss (with target data)
         y_pred = self.network(input_dataset)
         return self._loss_layer.forward(y_pred, target_dataset)
+
+

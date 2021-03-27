@@ -1,7 +1,7 @@
-from layers.mlp import MultiLayerNetwork
+import numpy as np
+from multilayernetwork import MultiLayerNetwork
 from preprocessor import Preprocessor
 from trainer import Trainer
-import numpy as np
 
 
 def example_main():
@@ -10,7 +10,7 @@ def example_main():
     activations = ["relu", "identity"]
     net = MultiLayerNetwork(input_dim, neurons, activations)
 
-    dat = np.loadtxt("iris.dat")
+    dat = np.loadtxt("./data/iris.dat")
     np.random.shuffle(dat)
 
     x = dat[:, :4]
