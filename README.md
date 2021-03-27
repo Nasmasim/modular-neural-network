@@ -4,7 +4,7 @@ This project presents a low-level implementation of a multi-layered neural netwo
 
 ## Project structure
 The mini-library implements in the **layers** folder:
-* `activations.py`: 
+* [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/tree/main/layers): 
   * a Sigmoid Layer
     * applies sigmoid function elementwise
   * a ReLu Layer
