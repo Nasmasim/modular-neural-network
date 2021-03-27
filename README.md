@@ -8,7 +8,7 @@ The mini-library implements:
   * a Sigmoid Layer
     * applies sigmoid function elementwise
   * a ReLu Layer
-    * applies sigmoid function elementwise
+    * applies ReLU elementwise
   * a Linear Layer
     * performs affine transformation $XW + B$ on a batch on inputs $X$, 
     * Xavier Glorot weight initialization
