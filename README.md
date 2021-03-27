@@ -4,7 +4,7 @@ This project presents a low-level implementation of a multi-layered neural netwo
 
 ## Project structure
 The mini-library implements in the **layers** folder:
-* under **activations.py**: 
+* `activations.py`: 
   * a Sigmoid Layer
     * applies sigmoid function elementwise
   * a ReLu Layer
