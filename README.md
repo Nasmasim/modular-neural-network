@@ -1,5 +1,5 @@
 # Modular Neural Network Library from Scratch
-## Description:
+## Description
 This project presents a low-level implementation of a multi-layered neural network, including a basic implementation of the backpropagation algorithm using only ```NumPy```. Included are also funtions for data preprocessing, training and evaluation. Performance comparable to ```PyTorch``` implementaions. 
 
 ## Project structure
