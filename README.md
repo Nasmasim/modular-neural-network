@@ -5,17 +5,17 @@ This project presents a low-level implementation of a multi-layered neural netwo
 ## Project structure
 The mini-library implements:
 * [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py): 
-  * a Sigmoid Layer
+  * Sigmoid Layer
     * applies sigmoid function elementwise
-  * a ReLu Layer
+  * ReLu Layer
     * applies ReLU elementwise
-  * a Linear Layer
+  * Linear Layer
     * performs affine transformation **XW + B** on a batch on inputs **X**
     * Xavier Glorot weight initialization
 * [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py): 
-  * an MSE Loss Layer
+  * MSE Loss Layer
     * computes mean-squared error between y_pred and y_target
-  * a Cross Entropy Loss Layer
+  * Cross Entropy Loss Layer
     * computes the softmax followed by the negative log-likelihood loss
 * [multilayernetwork.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/multilayernetwork.py):
     * modular stacked linear layers with activation function
@@ -25,4 +25,4 @@ The mini-library implements:
 * [preprocessor.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/preprocessor.py):
     * Preprocessor class which performs data normalization (min-max scaling)
 * [main.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/main.py):
-    * Example of an implementation of the mini library on the Iris Dataset
+    * example of an implementation of the mini library on the Iris Dataset
