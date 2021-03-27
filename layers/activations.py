@@ -3,7 +3,6 @@
 #           3 Activations: Sigmoid, ReLu, Linear                             #
 #                                                                            #
 ##############################################################################
-
 import numpy as np
 
 class Layer:
@@ -70,7 +69,6 @@ class SigmoidLayer(Layer):
         #return x passed through the sigmoid function
         return 1/(1+np.exp(-x))
 
-
     def backward(self, grad_z):
         """
         Given `grad_z`, the gradient of some scalar (e.g. loss) with respect to
@@ -96,7 +94,6 @@ class SigmoidLayer(Layer):
         
         #do element wise multiplication of gradient wrt to output of activation function and sigmoid derivative 
         return np.multiply(grad_z, sigmoid_derivative)
-
 
 class ReluLayer(Layer):
     """
@@ -127,8 +124,6 @@ class ReluLayer(Layer):
         self._cache_current = x
         #return x passed through the relu function
         return np.maximum(0,x)
-
-
 
     def backward(self, grad_z):
         """
@@ -171,8 +166,6 @@ class LinearLayer(Layer):
         """
         self.n_in = n_in
         self.n_out = n_out
-
-
         # initialize weights of linear layer with Xavier Glorot initialization (gain of 1)
         self._W = xavier_init((self.n_in, self.n_out), 1.0)
         # initialize biases with zeros, because we don’t want the neurons to start out with a bias
@@ -181,9 +174,7 @@ class LinearLayer(Layer):
         self._cache_current = None
         self._grad_W_current = None
         self._grad_b_current = None
-
-
-
+        
     def forward(self, x):
         """
         Performs forward pass through the layer (i.e. returns Wx + b).
@@ -206,9 +197,7 @@ class LinearLayer(Layer):
         
         # calculate output of linear layer and return
         z = x @ self._W + np.repeat(self._b,x.shape[0],axis=0)
-        
         return z
-
 
     def backward(self, grad_z):
         """
@@ -237,7 +226,6 @@ class LinearLayer(Layer):
         #return gradient with respect to the inputs of the layer: grad_z * w_transpose
         return grad_z @ np.transpose(self._W)
 
-
     def update_params(self, learning_rate):
         """
         Performs one step of gradient descent with given learning rate on the
@@ -250,16 +238,3 @@ class LinearLayer(Layer):
         #update weights and biases 
         self._W += - learning_rate * self._grad_W_current
         self._b += - learning_rate * self._grad_b_current
-
-
-
-
-
-
-
-
-
-
-
-
-
