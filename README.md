@@ -1,6 +1,6 @@
 # Modular Neural Network Library from Scratch
 ## Description:
-This project presents a low-level implementation of a multi-layered neural network, including a basic implementation of the backpropagation algorithm using only ```NumPy```. This includes funtions for data preprocessing, training and evaluation. 
+This project presents a low-level implementation of a multi-layered neural network, including a basic implementation of the backpropagation algorithm using only ```NumPy```. Included are also funtions for data preprocessing, training and evaluation. Performance comparable to ```PyTorch``` implementaions. 
 
 ## Project structure
 The mini-library implements:
@@ -25,5 +25,4 @@ The mini-library implements:
 * [preprocessor.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/preprocessor.py):
     * Preprocessor class which performs data normalization (min-max scaling)
 * [main.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/main.py):
-    * Training using the mini library on the Iris Dataset. 
-    * Results are comparable to ```PyTorch``` implementaions. 
+    * Example of an implementation of the mini library on the Iris Dataset.  
