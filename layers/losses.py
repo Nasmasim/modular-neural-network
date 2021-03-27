@@ -1,5 +1,10 @@
-import numpy as np
+##############################################################################
+#                                                                            #
+#           2 Losses: MSE, Cross Entropy (Softmax)                           #
+#                                                                            #
+##############################################################################
 
+import numpy as np
 
 class Layer:
     """
@@ -44,7 +49,6 @@ class MSELossLayer(Layer):
 
     def backward(self):
         return self._mse_grad(*self._cache_current)
-
 
 class CrossEntropyLossLayer(Layer):
     """

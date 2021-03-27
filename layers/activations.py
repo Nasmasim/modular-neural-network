@@ -1,3 +1,9 @@
+##############################################################################
+#                                                                            #
+#           3 Activations: Sigmoid, ReLu, Linear                             #
+#                                                                            #
+##############################################################################
+
 import numpy as np
 
 class Layer:
@@ -19,8 +25,6 @@ class Layer:
 
     def update_params(self, *args, **kwargs):
         pass
-
-
 def xavier_init(size, gain = 1.0):
     """
     Xavier initialization of network weights.
@@ -35,8 +39,6 @@ def xavier_init(size, gain = 1.0):
     low = -gain * np.sqrt(6.0 / np.sum(size))
     high = gain * np.sqrt(6.0 / np.sum(size))
     return np.random.uniform(low=low, high=high, size=size)
-
-
 
 class SigmoidLayer(Layer):
     """
@@ -96,8 +98,6 @@ class SigmoidLayer(Layer):
         return np.multiply(grad_z, sigmoid_derivative)
 
 
-
-
 class ReluLayer(Layer):
     """
     ReluLayer: Applies Relu function elementwise.
@@ -155,9 +155,6 @@ class ReluLayer(Layer):
         
         #do element wise multiplication of gradient wrt to output of activation function and relu derivative 
         return np.multiply(grad_z, relu_derivative)
-
-
-
 
 class LinearLayer(Layer):
     """

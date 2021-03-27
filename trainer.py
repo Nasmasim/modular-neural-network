@@ -1,3 +1,8 @@
+##############################################################################
+#                                                                            #
+#   Trainer: Object that manages the training of a neural network.           #
+#                                                                            #
+##############################################################################
 from layers.losses import CrossEntropyLossLayer, MSELossLayer
 import numpy as np
 
@@ -35,13 +40,11 @@ class Trainer(object):
         self.loss_fun = loss_fun
         self.shuffle_flag = shuffle_flag
 
-
         if loss_fun == 'cross_entropy':
             self._loss_layer = CrossEntropyLossLayer()
         elif loss_fun == 'mse':
             self._loss_layer = MSELossLayer()
         #self._loss_layer = CrossEntropyLossLayer() if loss_fun == 'cross_entropy' else self._loss_layer = MSELossLayer()
-
 
     @staticmethod
     def shuffle(input_dataset, target_dataset):
@@ -65,7 +68,6 @@ class Trainer(object):
         shuffled_inputs  = input_dataset[idx_list]
         shuffled_targets  = target_dataset[idx_list]
         return shuffled_inputs, shuffled_targets
-
 
     def train(self, input_dataset, target_dataset):
         """
@@ -105,8 +107,6 @@ class Trainer(object):
                 self.network.backward(grad_loss)
                 self.network.update_params(self.learning_rate)
 
-
-
     def eval_loss(self, input_dataset, target_dataset):
         """
         Function that evaluate the loss function for given data.
@@ -121,5 +121,3 @@ class Trainer(object):
         #get current target prediction and return calculated loss (with target data)
         y_pred = self.network(input_dataset)
         return self._loss_layer.forward(y_pred, target_dataset)
-
-

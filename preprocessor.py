@@ -1,3 +1,9 @@
+##############################################################################
+#                                                                            #
+#   Preprocessor: Object used to apply "preprocessing" operation to datasets.#
+#   The object can also be used to revert the changes                        #
+#                                                                            #
+##############################################################################
 import numpy as np
 
 class Preprocessor(object):
@@ -22,8 +28,6 @@ class Preprocessor(object):
         self.a = np.ones(data.shape[1])
         self.b = np.zeros(data.shape[1])
 
-
-
     def apply(self, data):
         """
         Apply the pre-processing operations to the provided dataset.
@@ -39,7 +43,6 @@ class Preprocessor(object):
         normalized_data = self.a + (data - self.minimum) * (self.b-self.a) / (self.maximum - self.minimum)
         return normalized_data
 
-
     def revert(self, data):
         """
         Revert the pre-processing operations to retreive the original dataset.
@@ -54,5 +57,3 @@ class Preprocessor(object):
         #revert min max normalization : Scaling a to smallest value and b to largest value
         reverted_data = (data - self.a) * (self.maximum - self.minimum) / (self.b-self.a) + self.minimum 
         return reverted_data
-
-

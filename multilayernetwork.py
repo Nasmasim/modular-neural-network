@@ -1,12 +1,13 @@
+##############################################################################
+#                                                                            #
+#   MultiLayerNetwork: Network consisting of stacked linear layers and       #
+#   activation functions.                                                    #
+#                                                                            #
+##############################################################################
 import numpy as np
 from layers.activations import LinearLayer, SigmoidLayer, ReluLayer
 
-
 class MultiLayerNetwork(object):
-    """
-    MultiLayerNetwork: A network consisting of stacked linear layers and
-    activation functions.
-    """
 
     def __init__(self, input_dim, neurons, activations):
         """
@@ -38,8 +39,7 @@ class MultiLayerNetwork(object):
             else:
                 layers[2*i+1] = 'identity'
             
-        self._layers = layers
-                
+        self._layers = layers              
 
     def forward(self, x):
         """
@@ -60,7 +60,6 @@ class MultiLayerNetwork(object):
             if not self._layers[i] == 'identity':
                 z_temp = self._layers[i].forward(z_temp)
         return z_temp 
-
 
     def __call__(self, x):
         return self.forward(x)
