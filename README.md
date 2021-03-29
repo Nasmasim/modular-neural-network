@@ -5,7 +5,7 @@ This project presents a low-level implementation of a multi-layered neural netwo
 ## Project structure
 The mini-library implements:
 | Custom Layers          | Function          | 
-| -------------          |:-------------:| 
+| -------------          |-------------| 
 | [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| Sigmoid Layer: applies sigmoid function elementwise |
 | | ReLu Layer: applies ReLU elementwise |
 | | Linear Layer: performs affine transformation **XW + B** on a batch on inputs **X** with Xavier Glorot weight initialization |
