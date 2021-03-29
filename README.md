@@ -4,6 +4,17 @@ This project presents a low-level implementation of a multi-layered neural netwo
 
 ## Project structure
 The mini-library implements:
+| Custom Layers          | Function          | 
+| -------------          |:-------------:| 
+| [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| Batch Normalization over a mini-batch of 2D inputs |
+| [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py)      | Max-pooling layer      |
+| [multilayernetwork.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/multilayernetwork.py) | Convolutional layer      |
+| [linear.py](https://github.com/Nasmasim/modular-CNNs/blob/main/custom_cnn_layers/linear.py) | Linear layer |
+| Training          | Function          | 
+| -------------          |:-------------:| 
+|[trainer.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/trainer.py) | |
+
+
 * [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py): 
   * Sigmoid Layer
     * applies sigmoid function elementwise
