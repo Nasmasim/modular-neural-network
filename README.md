@@ -15,7 +15,7 @@ The mini-library implements:
 
 
 For training:
-| Function          | Comment       | 
+| File          | Comment       | 
 | -------------     |-------------  |
 |[trainer.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/trainer.py) | Trainer class handles data shuffling and training given a network, using minibatch gradient descent |
 | [preprocessor.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/preprocessor.py) | Preprocessor class performs data normalization (min-max scaling) |
