@@ -4,17 +4,16 @@ This project presents a low-level implementation of a multi-layered neural netwo
 
 ## Project structure
 The mini-library implements:
-| Custom Layers          | Function          | 
-| -------------          |-------------| 
-| [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| Sigmoid Layer: applies sigmoid function elementwise |
-| | ReLu Layer: applies ReLU elementwise |
-| | Linear Layer: performs affine transformation **XW + B** on a batch on inputs **X** with Xavier Glorot weight initialization |
-| [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py)      | Max-pooling layer      |
-| [multilayernetwork.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/multilayernetwork.py) | Convolutional layer      |
-| [linear.py](https://github.com/Nasmasim/modular-CNNs/blob/main/custom_cnn_layers/linear.py) | Linear layer |
-| Training          | Function          | 
-| -------------          |:-------------:| 
-|[trainer.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/trainer.py) | |
+| Custom Layers          | Function      | Comment     |
+| -------------          |-------------| |-------------| 
+| [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| SigmoidLayer | applies sigmoid function elementwise |
+| | ReLu Layer | applies ReLU elementwise |
+| | Linear Layer | performs affine transformation on a batch on inputs with Xavier Glorot weight initialization |
+| [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py)      | MSELossLayer | computes mean-squared error between y_pred and y_target |
+| | Cross Entropy Loss Layer | computes the softmax followed by the negative log-likelihood loss |
+| [multilayernetwork.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/multilayernetwork.py) | MultiLayerNeuralNetwork | modular stacked linear layers with activation function
+|[trainer.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/trainer.py) | Trainer | handles data shuffling and training given a network, using minibatch gradient descent |
+| [preprocessor.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/preprocessor.py) | Preprocessor | performs data normalization (min-max scaling) |
 
 
 * [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py): 
