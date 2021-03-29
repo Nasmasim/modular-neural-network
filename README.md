@@ -6,13 +6,8 @@ This project presents a low-level implementation of a multi-layered neural netwo
 The mini-library implements:
 | Custom Layers          | Function          | 
 | -------------          |:-------------:| 
-| [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| * Sigmoid Layer
-    * applies sigmoid function elementwise
-  * ReLu Layer
-    * applies ReLU elementwise
-  * Linear Layer
-    * performs affine transformation **XW + B** on a batch on inputs **X**
-    * Xavier Glorot weight initialization |
+| [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| Sigmoid Layer
+applies sigmoid function elementwise ReLu Layer- applies ReLU elementwise Linear Layer performs affine transformation **XW + B** on a batch on inputs **X** Xavier Glorot weight initialization |
 | [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py)      | Max-pooling layer      |
 | [multilayernetwork.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/multilayernetwork.py) | Convolutional layer      |
 | [linear.py](https://github.com/Nasmasim/modular-CNNs/blob/main/custom_cnn_layers/linear.py) | Linear layer |
