@@ -8,7 +8,7 @@ The mini-library implements:
 | -------------          |-------------  |-------------| 
 | [activations.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/activations.py)| SigmoidLayer | applies sigmoid function elementwise |
 | | ReluLayer | applies ReLU elementwise |
-| | LinearLayer | performs affine transformation on a batch on inputs with Xavier Glorot weight initialization |
+| | LinearLayer | performs affine transformation on a batch of inputs with Xavier Glorot weight initialization |
 | [losses.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/layers/losses.py)      | MSELossLayer | computes mean-squared error between y_pred and y_target |
 | | CrossEntropyLossLayer | computes the softmax followed by the negative log-likelihood loss |
 | [multilayernetwork.py](https://github.com/Nasmasim/modular-neural-network-mini-Library/blob/main/multilayernetwork.py) | MultiLayerNetwork | modular stacked linear layers with activation function |
